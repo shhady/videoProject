@@ -90,19 +90,43 @@ let gameData = {
   
     //-------------------------------------------------------------------------
     function parseDuration(duration) {
-        // Step 1: Extract hours and minutes from the input string
+        //Extract hours and minutes from the input string
         const [hoursPart, minutesPart] = duration.split(' ');
       
-        // Step 2: Convert hours and minutes to integers
+        //Convert hours and minutes to integers
         const hours = parseInt(hoursPart) || 0;
         const minutes = parseInt(minutesPart) || 0;
       
-        // Step 3: Return an object with the hours and minutes
+        //Return an object with the hours and minutes
         return {
           hours: hours,
           minutes: minutes
         };
       }
+
       const durationString = "2h 30min";
       const durationObject = parseDuration(durationString);
       console.log(durationObject); //{ hours: 2, minutes: 30 }      
+
+//-----------------------------------------------------------------------------
+function getGameAcronym(title) {
+    //Split the title into words
+    const words = title.split(' ');
+  
+    //Get the first letter of each word
+    const acronymLetters = words.map(word => word[0]);
+  
+    //Join the letters together to form the acronym
+    const acronym = acronymLetters.join('');
+  
+    //Convert the acronym to uppercase (if it was all small letters )
+    const acronymUppercase = acronym.toUpperCase();
+  
+    //Return the final acronym
+    return acronym;
+  }
+  
+  // Test the function with the input "Epic Fantasy Battle"
+  const title = "Epic Fantasy Battle";
+  const acronym = getGameAcronym(title);
+  console.log(acronym); // Output: "EFB"
