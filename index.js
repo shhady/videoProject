@@ -49,7 +49,7 @@ let gameData = {
                .join(' ');
   }
   
-  const inputName = "iron warrior";
+  const inputName = "the dark knight ";
   const outputName = toTitleCase(inputName);
   console.log(outputName);
   // Output: "Iron Warrior"
@@ -62,33 +62,38 @@ let gameData = {
   Input: ["Iron Sword", "Healing Potion", "Steel Shield"], "Iron"
   Output: ["Iron Sword"]
   */
-  function searchInventory(inventory, query) {
+  function searchMovies(movies, query) {
     //the filter method It is used to create a new array containing elements from the original array that satisfy a specified condition. The filter() method does not modify the original array; instead, it returns a new array with the filtered elements.
-    const result = inventory.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+    const result = movies.filter(item => item.toLowerCase().includes(query.toLowerCase()));
     return result ; 
   }
-    const inventory = ["Iron Sword", "Healing Potion", "Steel Shield"];
-    const query = "Iron";
-    const output = searchInventory(inventory, query);
+    const movies = ["The Dark Knight", "Inception", "Interstellar"];
+    const query = "In";
+    const output = searchMovies(movies, query);
     console.log(output);
   
     //---------------------------------------------------------------------------
     /*
     3. NPC Name Format: Write a function, formatNPCName(name) , which takes an NPC's
     name in the format "last, first" and swaps it to "first last".
-    Input: "Goblin, Grunty"
-    Output: "Grunty Goblin"
+    Input: "Nolan, Christopher"
+    Output: "Christopher Nolan"
+
     */
-  function formatNPCName(name) {
+  function formatDirectorName(name){
       const [last, first] = name.split(", ");
       return `${first} ${last}`;
   }  
-    const inputName1 = "Goblin, Grunty";
-    const outputName1 = formatNPCName(inputName1);
+    const inputName1 = "Nolan, Christopher";
+    const outputName1 = formatDirectorName(inputName1);
     console.log(outputName1);
-    // Output: "Grunty Goblin"
-  
+    // Output: "Christopher Nolan"
+
     //-------------------------------------------------------------------------
+    /*
+    4. Movie Length: Write a function, parseDuration(duration) , that takes a string like "2h
+    30min" and returns an object with the number of hours and minutes as integers.
+    */
     function parseDuration(duration) {
         //Extract hours and minutes from the input string
         const [hoursPart, minutesPart] = duration.split(' ');
@@ -109,7 +114,11 @@ let gameData = {
       console.log(durationObject); //{ hours: 2, minutes: 30 }      
 
 //-----------------------------------------------------------------------------
-function getGameAcronym(title) {
+    /*
+    5. Movie Initials: Write a function, getMovieInitials(title) , that takes a movie title and
+    returns its initials.
+    */
+function getMovieInitials(title){
     //Split the title into words
     const words = title.split(' ');
   
@@ -127,6 +136,6 @@ function getGameAcronym(title) {
   }
   
   // Test the function with the input "Epic Fantasy Battle"
-  const title = "Epic Fantasy Battle";
-  const acronym = getGameAcronym(title);
-  console.log(acronym); // Output: "EFB"
+  const title = "The Dark Knight"  ;
+  const acronym = getMovieInitials(title);
+  console.log(acronym); // Output: "TDK"
