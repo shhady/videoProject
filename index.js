@@ -88,7 +88,21 @@ let gameData = {
     console.log(outputName1);
     // Output: "Grunty Goblin"
   
-
-
-
-
+    //-------------------------------------------------------------------------
+    function parseDuration(duration) {
+        // Step 1: Extract hours and minutes from the input string
+        const [hoursPart, minutesPart] = duration.split(' ');
+      
+        // Step 2: Convert hours and minutes to integers
+        const hours = parseInt(hoursPart) || 0;
+        const minutes = parseInt(minutesPart) || 0;
+      
+        // Step 3: Return an object with the hours and minutes
+        return {
+          hours: hours,
+          minutes: minutes
+        };
+      }
+      const durationString = "2h 30min";
+      const durationObject = parseDuration(durationString);
+      console.log(durationObject); //{ hours: 2, minutes: 30 }      
