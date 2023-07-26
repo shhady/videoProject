@@ -164,3 +164,17 @@ const movieObj ={
 getMovieDetails(movieObj);
 
 //-----------------------------------------------------------------------------
+/*
+7. Movie Slug: Write a function, createSlug(title) , that takes a movie title and returns a
+URL-friendly slug.
+Input: "The Dark Knight"
+Output: "the-dark-knight"
+*/
+const createSlug = (title) => {
+  return title
+        .split(" ")
+        .map(word => word.toLowerCase())
+        .join('-');
+}
+const Result = createSlug ('The Dark Knight');
+console.log(Result);
