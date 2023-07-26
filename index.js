@@ -202,7 +202,26 @@ Output: ["Action", "Adventure", "Sci-Fi"]
 */
 const splitGenres = (genres) =>
 {
-  return genres.split(',')
+  return genres.split(',');
 }
 console.log(splitGenres("Action, Adventure, Sci-Fi"));
+//-----------------------------------------------------------------------------
+/*
+10. Movie Quote Decoder: Write a function, decodeQuote(quote) , that takes an encoded
+movie quote and returns the decoded version. Encode a famous quote from a movie by
+replacing all vowels with numbers (e.g., "1" for "a", "2" for "e", etc.). Use replace() .
+Input: "Th3 dr34m 1s r34l!" (The dream is real!)
+Output: "The dream is real!"
+*/
+const decodeQuote = (quote) => 
+{
+  return quote.split(' ')
+              .map(word => word
+              .replace('1' , "i")
+              .replace('3' , "e")
+              .replace('4' , "a"))
+              .join(' ') //using the join with space inside so we can separate the words in the array with space 
+}
+console.log(decodeQuote("Th3 dr34m 1s r34l!"));
+
 //-----------------------------------------------------------------------------
