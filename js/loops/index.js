@@ -30,8 +30,8 @@ const moviesAverageRatingsData=[
     let highest=0;
     let ratedArray=[];
     for(const movie of  moviesTopRatedData) {
-if (movie.rating > highest) {
-    highest=movie.rating;
+        if (movie.rating > highest) {
+            highest=movie.rating;
     ratedArray=movie.title;
     }
 
@@ -50,7 +50,8 @@ if (movie.rating > highest) {
    console.log(tempArray1)
        for(const movie of  moviesRatingMatrixData){
         let tempArray2=[]
-           for(const rating of movie.ratings){
+           for(const rating of movie.ratings)
+           {
             tempArray2.push(rating);
            }
            matrixArray=[tempArray1,tempArray2];
