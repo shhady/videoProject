@@ -246,3 +246,38 @@ const moviesTitles = [
   { title1: "The Dark Knight" }
 ];
  console.log(getMovies(moviesTitles));
+
+ //----------------------------------------------------------------------------
+ /*
+ 2. Control Flow in Arrow Functions
+Objective: Understand how to use control flow statements (like if-else) in arrow
+functions.
+Exercise: Given a function averageMovieRating that returns a string stating
+whether the average movie rating is "Good", "Average", or "Bad" based on a specific
+rating. Convert this function into an arrow function.
+Initial Code:
+function averageMovieRating(rating) {
+ if (rating > 7) {
+ return "Good";
+ } else if (rating > 5) {
+ return "Average";
+ } else {
+ return "Bad";
+ }
+}
+*/
+const averageMovieRating = (rating) => {
+    if(rating > 7) 
+    {
+        return "Good";
+    } 
+    else if (rating > 5) 
+    {
+       return "Average";
+    }
+    else 
+    {
+        return "Bad";
+    }
+}
+console.log(averageMovieRating(10));
