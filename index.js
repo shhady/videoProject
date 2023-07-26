@@ -139,3 +139,28 @@ function getMovieInitials(title){
   const title = "The Dark Knight"  ;
   const acronym = getMovieInitials(title);
   console.log(acronym); // Output: "TDK"
+
+  //---------------------------------------------------------------------------
+  /*
+  6. Concatenate Movie Details: Write a function, getMovieDetails(movie) , that takes an
+  object with movie details like title, director, and genre and returns a single string that
+  combines all this information.
+  Input:
+  { title: "Inception", director: "Christopher Nolan", genre: "Sci-Fi"
+  }
+  Output: "Inception, directed by Christopher Nolan, genre: Sci-Fi"
+*/
+function getMovieDetails(movie)
+{
+  console.log ("title: " + movie.title + ", "+ "directed by: " + movie.director + ", " +"genre: " + movie.genre);
+}
+//the movie objects 
+const movieObj ={
+  title : "Inception",
+  director :'Christopher Nolan', 
+  genre : 'Sci-Fi'
+};
+//calling the function with the moiveObj 
+getMovieDetails(movieObj);
+
+//-----------------------------------------------------------------------------
