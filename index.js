@@ -281,3 +281,38 @@ const averageMovieRating = (rating) => {
     }
 }
 console.log(averageMovieRating(10));
+//-----------------------------------------------------------------------------
+/*
+3. Arrow Functions with Multiple Operations
+Objective: Learn how to perform multiple operations in arrow functions before
+returning a value.
+Exercise: Given a function getTotalMovieLength that takes an array of movies,
+each with a length property, calculates the total length of all movies, and returns a
+string. Convert this function into an arrow function.y
+Initial Code:
+function getTotalMovieLength(movies) {
+ let totalLength = 0;
+ for (let i = 0; i < movies.length; i++) {
+ totalLength += movies[i].length;
+ }
+ return 'Total movie length is ' + totalLength + ' minutes';
+}
+
+*/
+const getTotalMovieLength = (movies) => {
+  let totalLength = 0;
+  for (let i = 0; i < movies.length; i++) {
+  totalLength += movies[i].length;
+  } 
+  return 'Total movie length is ' + totalLength + ' minutes';
+}
+const moviesLength = [
+  { title: 'Movie A', length: 120 },
+  { title: 'Movie B', length: 90 },
+  { title: 'Movie C', length: 150 },
+  { title: 'Movie D', length: 65 },
+  { title: 'Movie E', length: 81 },
+  { title: 'Movie F', length: 230 },
+];
+
+console.log(getTotalMovieLength(moviesLength)) ;
