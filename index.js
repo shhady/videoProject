@@ -170,11 +170,39 @@ URL-friendly slug.
 Input: "The Dark Knight"
 Output: "the-dark-knight"
 */
+//using the Arrow funstion to Slug the name of the movie 
 const createSlug = (title) => {
   return title
-        .split(" ")
-        .map(word => word.toLowerCase())
-        .join('-');
+        .split(" ")//to split the words in the string into Array of words 
+        .map(word => word.toLowerCase())//for making thw words in lower case 
+        .join('-'); // re-adding the words together with '-' between them 
 }
-const Result = createSlug ('The Dark Knight');
-console.log(Result);
+const Result = createSlug ('The Dark Knight'); // putting the return value in an argument 
+console.log(Result);// printing the result 
+
+//-----------------------------------------------------------------------------
+/*
+8. Synopsis Trimming: Write a function, trimSynopsis(synopsis, maxLength) , that
+trims the movie's synopsis to a specified length without cutting off words. 
+Use slice() , lastIndexOf() , and trim() .
+Input:
+"A thief who steals corporate secrets through the use of dreamsharing technology is given the inverse task of planting an idea
+into the mind of a CEO. But his tragic past may doom the project and
+his team to disaster."
+, 100
+Output:
+"A thief who steals corporate secrets through the use of dreamsharing technology is given the inverse task of..."
+*/
+//-----------------------------------------------------------------------------
+/*
+9. Genre List: Write a function, splitGenres(genres) , that takes a string of genres
+separated by commas and converts it into an array of individual genres.
+Input: "Action, Adventure, Sci-Fi"
+Output: ["Action", "Adventure", "Sci-Fi"]
+*/
+const splitGenres = (genres) =>
+{
+  return genres.split(',')
+}
+console.log(splitGenres("Action, Adventure, Sci-Fi"));
+//-----------------------------------------------------------------------------
