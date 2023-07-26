@@ -222,6 +222,27 @@ const decodeQuote = (quote) =>
               .replace('4' , "a"))
               .join(' ') //using the join with space inside so we can separate the words in the array with space 
 }
-console.log(decodeQuote("Th3 dr34m 1s r34l!"));
+console.log(decodeQuote("Th3 dr34m 1s r34l!\n"));
 
 //-----------------------------------------------------------------------------
+/*1. Simple Arrow Function Conversion
+Objective: Convert a traditional function into an arrow function.
+Exercise: Given a function getMovies that returns an array of all movie titles from
+your movie rating system, convert it into an arrow function.
+Initial Code:
+function getMovies(movies) {
+ return movies.map(movie => movie.title);
+}
+Sure, let's change exercises 2 and 3 as per your request:
+*/
+console.log("THE ARROW FUNCTIONS EXC:");
+const getMovies = (movies)=>
+{
+  return movies.map(movie => movie.title1);
+}
+const moviesTitles = [
+  { title1: "Inception" },
+  { title1: "Interstellar" },
+  { title1: "The Dark Knight" }
+];
+ console.log(getMovies(moviesTitles));
