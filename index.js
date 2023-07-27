@@ -316,3 +316,34 @@ const moviesLength = [
 ];
 
 console.log(getTotalMovieLength(moviesLength)) ;
+
+//-----------------------------------------------------------------------------
+/*
+4. Arrow Functions as Callbacks
+Objective: Understand how arrow functions can be used as callbacks.
+Exercise: Your rating system sorts movies by their average ratings before displaying.
+Currently, it uses a traditional function for sorting. Convert this sorting function into an
+arrow function.
+Initial Code:
+const sortedMovies = movies.sort(function(a, b) {
+ return b.averageRating - a.averageRating;
+});
+
+*/
+const sortedMovies = movies.sort((a, b) => b.averageRating - a.averageRating);
+
+//-----------------------------------------------------------------------------
+/*
+5. Implicit Return with Arrow Functions
+Objective: Understand the concept of implicit return in arrow functions.
+Exercise: There's a function getMovieTitles which returns an array of all movie
+titles. Convert this function into a single-line arrow function using the implicit return
+feature.
+Initial Code:
+function getMovieTitles(movies) {
+ return movies.map(function(movie) {
+ return movie.title;
+ });
+}
+*/
+const getMovieTitles = movies =>movies.map(movie => movie.title);
