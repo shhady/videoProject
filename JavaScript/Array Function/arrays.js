@@ -24,5 +24,5 @@ const movies = [
 /////////////////////////////////////////////////////////
 
 
-const ratingValue =  ratingValue.f => ratingPara >= 9.1 ;
-const result = ratingValue();
+//const ratingValue =  ratingValue.f => ratingPara >= 9.1 ;
+//const result = ratingValue();
