@@ -304,7 +304,7 @@ const getTotalMovieLength = (movies) => {
   for (let i = 0; i < movies.length; i++) {
   totalLength += movies[i].length;
   } 
-  return 'Total movie length is ' + totalLength + ' minutes';
+  return 'Total movie length is ' + totalLength + ' minutes\n';
 }
 const moviesLength = [
   { title: 'Movie A', length: 120 },
@@ -347,3 +347,27 @@ function getMovieTitles(movies) {
 }
 */
 const getMovieTitles = movies =>movies.map(movie => movie.title);
+//-----------------------------------------------------------------------------
+console.log('ARRAY METHODS:');
+//-----------------------------------------------------------------------------
+/*
+1. Display Movie Titles
+Input: An array of movie objects.
+Task: Return a new array that contains only the titles of each movie.
+Example: Given the input data from above, the function should return: ["The
+Shawshank Redemption", "The Godfather", "The Godfather: Part II", "The Dark
+Knight", "12 Angry Men"]
+*/
+const getMovieTitles1 = (movies) =>{
+  return movies.map(movie => movie.title )
+}
+const moviesInfo = [
+  { title: "The Shawshank Redemption", year: "1994", director: "Frank Darabont" },
+  { title: "The Godfather", year: "1972", director: "Francis Ford Coppola" },
+  { title: "The Godfather: Part II", year: "1974", director: "Francis Ford Coppola" },
+  { title: "The Dark Knight", year: "2008", director: "Christopher Nolan" },
+  { title: "12 Angry Men", year: "1957", director: "Sidney Lumet" }
+];
+
+const movieTitles = getMovieTitles1(moviesInfo);
+console.log(movieTitles);
