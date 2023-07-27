@@ -361,13 +361,46 @@ Knight", "12 Angry Men"]
 const getMovieTitles1 = (movies) =>{
   return movies.map(movie => movie.title )
 }
-const moviesInfo = [
-  { title: "The Shawshank Redemption", year: "1994", director: "Frank Darabont" },
-  { title: "The Godfather", year: "1972", director: "Francis Ford Coppola" },
-  { title: "The Godfather: Part II", year: "1974", director: "Francis Ford Coppola" },
-  { title: "The Dark Knight", year: "2008", director: "Christopher Nolan" },
-  { title: "12 Angry Men", year: "1957", director: "Sidney Lumet" }
+const moviess = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
 ];
 
-const movieTitles = getMovieTitles1(moviesInfo);
+const movieTitles = getMovieTitles1(moviess);
 console.log(movieTitles);
+
+//-----------------------------------------------------------------------------
+/*
+const movies = [
+  { title: "The Shawshank Redemption", rating: 9.3, votes: 2337890, genre: ["Drama"], year: 1994 },
+  { title: "The Godfather", rating: 9.2, votes: 1603867, genre: ["Crime", "Drama"], year: 1972 },
+  { title: "The Godfather: Part II", rating: 9.0, votes: 1123155, genre: ["Crime", "Drama"], year: 1974 },
+  { title: "The Dark Knight", rating: 9.0, votes: 2273490, genre: ["Action", "Crime", "Drama"], year: 2008 },
+  { title: "12 Angry Men", rating: 9.0, votes: 686888, genre: ["Crime", "Drama"], year: 1957 }
+];
+
+2. Highly Rated Movies
+Input: An array of movie objects, a minimum rating value.
+Task: Return a new array containing only movies with a rating equal to or greater than
+the provided value.
+Example: Given the input data and a rating of 9.1, the function should return an array
+containing only the objects for "The Shawshank Redemption" and "The Godfather".
+*/
+const highlyRatedMovies = (movies, rate) => {
+  const filteredMovies = movies.filter(movie => movie.rating >= rate);
+  return filteredMovies;
+};
+
+const movieTitleAndRate = [
+  { title: "The Shawshank Redemption", rating: 9.3 },
+  { title: "The Godfather", rating: 9.2 },
+  { title: "The Godfather: Part II", rating: 9.0 },
+  { title: "The Dark Knight", rating: 9.0 },
+  { title: "12 Angry Men", rating: 9.0 }
+];
+
+const highRatedMovies = highlyRatedMovies(movieTitleAndRate, 9.1);
+console.log(highRatedMovies);
