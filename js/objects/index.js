@@ -37,11 +37,11 @@ removeRating : function (MovieTitle,ratingMovie) {
  calculateAverageRating : function (MovieTitle){
     const movie = this.movies.find((movie)=> movie.title === MovieTitle)
     if(movie){
-        
        const sum = movie.ratings.reduce((acc, ra)=> acc + ra ,0)
        movie.averageRatings = movie.ratings.length > 0 ? sum/movie.ratings.length : 0;
-      }
- }                  }                                         
+             }
+                                               }     
+                                                         }                                         
                                         
                                 
                                         
