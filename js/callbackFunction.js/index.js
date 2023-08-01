@@ -31,7 +31,7 @@ function convertToUpperCase(movie, callback) {
    checkifRatingisNumber(movie1, isNumber)
 
 
-   //Exercise 3: Add Exclamation to Movie Title
+   //Exercise 3: Add Exclamation to Movie Title  // CR: It might be better to avoid modifying the original title and instead create a new string with the exclamation mark appended.
    function addExclamation(title) {
     return title=`${title}!`;
   }
@@ -46,7 +46,7 @@ function convertToUpperCase(movie, callback) {
 
    //Exercise 4: Reverse Words in Movie Description
 
- function reverseWords(description) {
+ function reverseWords(description) {    // CR: adding validation checks to ensure that the description property exists in the movie object before attempting to apply the
     return description.split(' ').reverse().join(' ');
   }
 
